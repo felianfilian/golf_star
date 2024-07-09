@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class CameraControl : MonoBehaviour
 {
-    public Transform target;   
+    public Transform target;
+
+    public float moveSpeed;
     
     private Vector3 offest;
+    private float rotation;
 
 
     void Start()
