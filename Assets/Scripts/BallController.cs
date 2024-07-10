@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class BallController : MonoBehaviour
 {
-
     
     public float hitpower = 25f;
+    public float stopCutoff = 1.75f;
+    public float stopSpeed = 0.95f;
 
     private Rigidbody rb;
 
@@ -23,9 +24,18 @@ public class BallController : MonoBehaviour
             rb.velocity = Vector3.forward * hitpower;
         }
 
-        if(rb.velocity.magnitude < 2)
+        if(rb.velocity.y > -0.01f)
         {
-
-        }
+            if (rb.velocity.magnitude < stopCutoff)
+            {
+                rb.velocity *= stopSpeed;
+                if (rb.velocity.magnitude < 0.01f)
+                {
+                    rb.velocity = Vector3.zero;
+                    rb.angularVelocity = Vector3.zero;
+                }
+            }
+        } 
+        
     }
 }

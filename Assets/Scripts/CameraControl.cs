@@ -8,8 +8,7 @@ public class CameraControl : MonoBehaviour
     public Transform verticalPoint;
 
     public float moveSpeed = 5f;
-    
-    private Vector3 offest;
+ 
     private float rotation;
     private float verticalRotation;
 
@@ -17,14 +16,14 @@ public class CameraControl : MonoBehaviour
 
     void Start()
     {
-        offest = transform.position - target.position;
+     
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position = target.position + offest;
-        rotation += Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime;
-        transform.rotation = Quaternion.Euler(18f, rotation, 0);
+        transform.position = target.position;
+        //rotation += Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime;
+        //transform.rotation = Quaternion.Euler(18f, rotation, 0);
     }
 }
