@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class BallController : MonoBehaviour
 {
-    
+    public CameraControl camera;
+
+
     public float hitpower = 25f;
     public float stopCutoff = 1.75f;
     public float stopSpeed = 0.95f;
 
     private Rigidbody rb;
+    
 
     void Start()
     {
@@ -21,7 +24,8 @@ public class BallController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F)) 
         {
-            rb.velocity = Vector3.forward * hitpower;
+            // rb.velocity = Vector3.forward * hitpower;
+            rb.velocity = camera.transform.forward * hitpower;
         }
 
         if(rb.velocity.y > -0.01f)
