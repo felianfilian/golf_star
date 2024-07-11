@@ -6,6 +6,7 @@ public class CameraControl : MonoBehaviour
 {
     public Transform target;
     public Transform verticalPoint;
+    public GameObject directionIndicator;
 
     public bool useMouseRotation = false;
     public float moveSpeed = 180f;
@@ -37,5 +38,15 @@ public class CameraControl : MonoBehaviour
         
         transform.rotation = Quaternion.Euler(0f, rotation, 0f);
         verticalPoint.localRotation = Quaternion.Euler(verticalRotation, 0f, 0f);
+    }
+
+    public void HideIndicator()
+    {
+        directionIndicator.SetActive(false);
+    }
+
+    public void ShowIndicator()
+    {
+        directionIndicator.SetActive(true);
     }
 }

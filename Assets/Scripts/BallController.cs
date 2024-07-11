@@ -5,7 +5,7 @@ using UnityEngine;
 public class BallController : MonoBehaviour
 {
     public CameraControl camera;
-
+    public GameObject directionIndicator;
 
     public float hitpower = 25f;
     public float stopCutoff = 1.75f;
