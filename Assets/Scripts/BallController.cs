@@ -21,12 +21,12 @@ public class BallController : MonoBehaviour
     
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F)) 
-        {
-            // rb.velocity = Vector3.forward * hitpower;
-            rb.velocity = camera.transform.forward * hitpower;
-            camera.HideIndicator();
-        }
+        //if (Input.GetKeyDown(KeyCode.F)) 
+        //{
+        //    // rb.velocity = Vector3.forward * hitpower;
+        //    rb.velocity = camera.transform.forward * hitpower;
+        //    camera.HideIndicator();
+        //}
 
         if(rb.velocity.y > -0.01f)
         {
@@ -42,5 +42,11 @@ public class BallController : MonoBehaviour
             }
         } 
         
+    }
+
+    public void ShotBall(float shotForce)
+    {
+        rb.velocity = camera.transform.forward * shotForce;
+        camera.HideIndicator();
     }
 }
