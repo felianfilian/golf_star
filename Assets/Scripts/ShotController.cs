@@ -48,7 +48,7 @@ public class ShotController : MonoBehaviour
 
             if (Input.GetMouseButtonDown(0))
             {
-                ballController.ShotBall(maxShotPower);
+                ballController.ShotBall(activeShotPower);
             }
         }
     }
