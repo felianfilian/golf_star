@@ -10,6 +10,9 @@ public class ShotController : MonoBehaviour
 
     public float maxShotPower = 25f;
     public bool canShot = true;
+    public float activeShotPower;
+    public float powerChangeSpeed = 15f;
+    public bool powerGrowing = true;
 
     private void Awake()
     {
@@ -26,6 +29,23 @@ public class ShotController : MonoBehaviour
     {
         if (canShot)
         {
+            if (activeShotPower >= maxShotPower) 
+            {
+                powerGrowing = false;
+            } else if(activeShotPower <= 0f)
+            {
+                powerGrowing = true;
+            }
+
+            if (powerGrowing)
+            {
+                activeShotPower = Mathf.MoveTowards(activeShotPower, maxShotPower, powerChangeSpeed * Time.deltaTime);
+            }
+            else
+            {
+                activeShotPower = Mathf.MoveTowards(activeShotPower, 0f, powerChangeSpeed * Time.deltaTime);
+            }
+
             if (Input.GetMouseButtonDown(0))
             {
                 ballController.ShotBall(maxShotPower);
