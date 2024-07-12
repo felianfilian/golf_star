@@ -17,11 +17,12 @@ public class ShotController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(canShot)
+        if (canShot)
         {
             if (Input.GetMouseButtonDown(0))
             {
                 ballController.ShotBall(maxShotPower);
             }
+        }
     }
 }
