@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 264367120}
   - component: {fileID: 264367119}
   m_Layer: 0
-  m_Name: Plane
+  m_Name: direction_indicator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -621,7 +621,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camera: {fileID: 1431450616}
-  directionIndicator: {fileID: 0}
   hitpower: 15
   stopCutoff: 1.75
   stopSpeed: 0.95
@@ -816,7 +815,7 @@ Transform:
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.43, z: -2.14}
+  m_LocalPosition: {x: 0, y: 1, z: -3.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -846,14 +845,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1010461215}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.1564345, y: 0, z: 0, w: 0.98768836}
+  m_LocalRotation: {x: 0.17364816, y: 0, z: 0, w: 0.9848078}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 963194228}
   m_Father: {fileID: 1431450617}
-  m_LocalEulerAnglesHint: {x: 18, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 20, y: 0, z: 0}
 --- !u!1 &1106407468
 GameObject:
   m_ObjectHideFlags: 0
@@ -1201,7 +1200,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 732375692}
   verticalPoint: {fileID: 1010461216}
-  directionIndicator: {fileID: 0}
+  directionIndicator: {fileID: 264367117}
   useMouseRotation: 0
   moveSpeed: 180
 --- !u!4 &1431450617

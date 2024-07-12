@@ -5,7 +5,6 @@ using UnityEngine;
 public class BallController : MonoBehaviour
 {
     public CameraControl camera;
-    public GameObject directionIndicator;
 
     public float hitpower = 25f;
     public float stopCutoff = 1.75f;
@@ -26,6 +25,7 @@ public class BallController : MonoBehaviour
         {
             // rb.velocity = Vector3.forward * hitpower;
             rb.velocity = camera.transform.forward * hitpower;
+            camera.HideIndicator();
         }
 
         if(rb.velocity.y > -0.01f)
@@ -37,6 +37,7 @@ public class BallController : MonoBehaviour
                 {
                     rb.velocity = Vector3.zero;
                     rb.angularVelocity = Vector3.zero;
+                    camera.ShowIndicator();
                 }
             }
         } 
