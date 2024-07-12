@@ -4,10 +4,17 @@ using UnityEngine;
 
 public class ShotController : MonoBehaviour
 {
-    public float maxShotPower = 25f;
+    public static ShotController instance;
+
     public BallController ballController;
 
-    private bool canShot = true;
+    public float maxShotPower = 25f;
+    public bool canShot = true;
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     void Start()
     {
