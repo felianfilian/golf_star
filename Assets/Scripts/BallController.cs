@@ -38,6 +38,7 @@ public class BallController : MonoBehaviour
                     rb.velocity = Vector3.zero;
                     rb.angularVelocity = Vector3.zero;
                     camera.ShowIndicator();
+                    UIController.instance.sliderPower.gameObject.SetActive(true);
                     ShotController.instance.canShot = true;
                 }
             }
@@ -50,5 +51,6 @@ public class BallController : MonoBehaviour
         ShotController.instance.canShot = false;
         rb.velocity = camera.transform.forward * shotForce;
         camera.HideIndicator();
+        UIController.instance.sliderPower.gameObject.SetActive(false);
     }
 }
