@@ -5,10 +5,16 @@ using UnityEngine.UI;
 
 public class UIController : MonoBehaviour
 {
+    public static UIController instance;
 
     public Slider sliderPower;
 
-    public void ChangePowerUI(float power, float maxPower)
+    private void Awake()
+    {
+        instance = this;
+    }
+
+    public void UpdatePowerUI(float power, float maxPower)
     {
         sliderPower.maxValue = maxPower;
         sliderPower.value = power; 

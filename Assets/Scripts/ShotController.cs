@@ -50,6 +50,8 @@ public class ShotController : MonoBehaviour
             {
                 ballController.ShotBall(activeShotPower);
             }
+
+            UIController.instance.UpdatePowerUI(activeShotPower, maxShotPower);
         }
     }
 }
