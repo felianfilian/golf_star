@@ -4,14 +4,22 @@ using UnityEngine;
 
 public class BallController : MonoBehaviour
 {
-    public CameraControl camera;
+    public static BallController instance;
+
+    public Rigidbody rb;
+    public new CameraControl camera;
 
     public float hitpower = 25f;
     public float stopCutoff = 1.75f;
     public float stopSpeed = 0.95f;
 
-    private Rigidbody rb;
     
+
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     void Start()
     {
@@ -37,9 +45,13 @@ public class BallController : MonoBehaviour
                 {
                     rb.velocity = Vector3.zero;
                     rb.angularVelocity = Vector3.zero;
-                    camera.ShowIndicator();
-                    UIController.instance.sliderPower.gameObject.SetActive(true);
-                    ShotController.instance.canShot = true;
+                    
+                    if (!CupController.instance.ballInCup)
+                    {
+                        ShotController.instance.canShot = true;
+                        camera.ShowIndicator();
+                        UIController.instance.sliderPower.gameObject.SetActive(true);
+                    }
                 }
             }
         } 
