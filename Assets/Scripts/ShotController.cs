@@ -8,6 +8,7 @@ public class ShotController : MonoBehaviour
 
     public BallController ballController;
 
+    public float minShotPower = 5f;
     public float maxShotPower = 25f;
     public bool canShot = true;
     public float activeShotPower;
@@ -26,7 +27,7 @@ public class ShotController : MonoBehaviour
             if (activeShotPower >= maxShotPower) 
             {
                 powerGrowing = false;
-            } else if(activeShotPower <= 0f)
+            } else if(activeShotPower <= minShotPower)
             {
                 powerGrowing = true;
             }
@@ -37,7 +38,7 @@ public class ShotController : MonoBehaviour
             }
             else
             {
-                activeShotPower = Mathf.MoveTowards(activeShotPower, 0f, powerChangeSpeed * Time.deltaTime);
+                activeShotPower = Mathf.MoveTowards(activeShotPower, minShotPower, powerChangeSpeed * Time.deltaTime);
             }
 
             if (Input.GetMouseButtonDown(0))
@@ -48,5 +49,10 @@ public class ShotController : MonoBehaviour
 
             UIController.instance.UpdatePowerUI(activeShotPower, maxShotPower);
         }
+    }
+
+    public void ResetShotPower()
+    {
+        activeShotPower = minShotPower;
     }
 }
