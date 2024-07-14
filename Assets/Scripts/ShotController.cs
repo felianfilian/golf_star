@@ -11,7 +11,7 @@ public class ShotController : MonoBehaviour
     public float maxShotPower = 25f;
     public bool canShot = true;
     public float activeShotPower;
-    public float powerChangeSpeed = 15f;
+    public float powerChangeSpeed = 30f;
     public bool powerGrowing = true;
 
     private void Awake()
@@ -19,12 +19,6 @@ public class ShotController : MonoBehaviour
         instance = this;
     }
 
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
         if (canShot)
