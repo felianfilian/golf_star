@@ -8,15 +8,22 @@ public class UIController : MonoBehaviour
     public static UIController instance;
 
     public Slider sliderPower;
+    public GameObject txtWin;
 
     private void Awake()
     {
         instance = this;
+        txtWin.SetActive(false);
     }
 
     public void UpdatePowerUI(float power, float maxPower)
     {
         sliderPower.maxValue = maxPower;
         sliderPower.value = power; 
+    }
+
+    public void ShowWinScreen()
+    {
+        txtWin.SetActive(true); 
     }
 }
