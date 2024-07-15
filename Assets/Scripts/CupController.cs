@@ -5,7 +5,7 @@ using UnityEngine;
 public class CupController : MonoBehaviour
 {
     public static CupController instance;
-    public bool ballInCup;
+    public bool ballInCup = false;
 
     private void Awake()
     {
@@ -17,9 +17,7 @@ public class CupController : MonoBehaviour
         if(other.gameObject.CompareTag("Player"))
         {
             ballInCup = true;
-            ShotController.instance.canShot = false;
-            BallController.instance.rb.velocity = Vector3.zero;
-            UIController.instance.ShowWinText();
+            GameManager.instance.BallInHole();
         }
     }
 }

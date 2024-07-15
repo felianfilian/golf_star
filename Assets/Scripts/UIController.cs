@@ -10,18 +10,33 @@ public class UIController : MonoBehaviour
 
     public Slider sliderPower;
     public GameObject txtWin;
+    public TMP_Text txt_score;
     public TMP_Text txt_shots;
+    public GameObject resultScreen;
+    public TMP_Text txtResult;
 
     private void Awake()
     {
         instance = this;
-        txtWin.SetActive(false);
+        
     }
+
+    private void Start()
+    {
+        txtWin.SetActive(false);
+        resultScreen.SetActive(false);
+    }
+
 
     public void UpdatePowerUI(float power, float maxPower)
     {
         sliderPower.maxValue = maxPower;
         sliderPower.value = power; 
+    }
+
+    public void UpdateScoreCount(int score)
+    {
+        txt_score.text = "Score: " + score;
     }
 
     public void UpdateShotCount(int shots)
@@ -33,5 +48,11 @@ public class UIController : MonoBehaviour
     public void ShowWinText()
     {
         txtWin.SetActive(true); 
+    }
+
+    public void ShowResultScreen(int scoreResult)
+    {
+        txtResult.text = scoreResult.ToString();
+        resultScreen.SetActive(true);
     }
 }

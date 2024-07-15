@@ -44,7 +44,7 @@ public class ShotController : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
                 ballController.ShotBall(activeShotPower);
-                GameManager.Instance.CountShot();
+                GameManager.instance.CountShot();
             }
 
             UIController.instance.UpdatePowerUI(activeShotPower, maxShotPower);
