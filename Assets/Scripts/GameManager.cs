@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
 
     private int shotCounter = 0;
+    
 
     private void Awake()
     {
