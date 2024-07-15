@@ -19,7 +19,7 @@ public class CupController : MonoBehaviour
             ballInCup = true;
             ShotController.instance.canShot = false;
             BallController.instance.rb.velocity = Vector3.zero;
-            UIController.instance.ShowWinScreen();
+            UIController.instance.ShowWinText();
         }
     }
 }

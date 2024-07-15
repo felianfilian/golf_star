@@ -16,5 +16,6 @@ public class GameManager : MonoBehaviour
     public void CountShot()
     {
         shotCounter++;
+        UIController.instance.UpdateShotCount(shotCounter);
     }
 }

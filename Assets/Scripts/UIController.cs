@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,6 +10,7 @@ public class UIController : MonoBehaviour
 
     public Slider sliderPower;
     public GameObject txtWin;
+    public TMP_Text txt_shots;
 
     private void Awake()
     {
@@ -22,7 +24,13 @@ public class UIController : MonoBehaviour
         sliderPower.value = power; 
     }
 
-    public void ShowWinScreen()
+    public void UpdateShotCount(int shots)
+    {
+        txt_shots.text = "Shots: " + shots;
+    }
+
+
+    public void ShowWinText()
     {
         txtWin.SetActive(true); 
     }
