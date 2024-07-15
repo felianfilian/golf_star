@@ -53,6 +53,24 @@ public class UIController : MonoBehaviour
     public void ShowResultScreen(int scoreResult)
     {
         txtResult.text = scoreResult.ToString();
+        txtWin.SetActive(false);
         resultScreen.SetActive(true);
+    }
+
+    // Buttons
+
+    public void MainMenu()
+    {
+
+    }
+
+    public void Restart()
+    {
+
+    }
+
+    public void NestCourse()
+    {
+        
     }
 }
