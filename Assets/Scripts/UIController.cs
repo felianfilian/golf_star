@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class UIController : MonoBehaviour
@@ -66,7 +67,7 @@ public class UIController : MonoBehaviour
 
     public void Restart()
     {
-
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void NestCourse()

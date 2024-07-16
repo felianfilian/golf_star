@@ -1557,7 +1557,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 723027152}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 987732221}
+        m_TargetAssemblyTypeName: UIController, Assembly-CSharp
+        m_MethodName: Restart
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &723027152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2859,7 +2871,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ballInCup: 0
-  resultDelay: 2
 --- !u!4 &1464808306
 Transform:
   m_ObjectHideFlags: 0
