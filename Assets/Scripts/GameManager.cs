@@ -31,6 +31,13 @@ public class GameManager : MonoBehaviour
         UIController.instance.UpdateShotCount(shotCounter);
     }
 
+    public void CountScore(int amount)
+    {
+        score += amount;
+        UIController.instance.UpdateScoreCount(score);
+    }
+
+
     public void BallInHole()
     {
         StartCoroutine(showResultCo());
