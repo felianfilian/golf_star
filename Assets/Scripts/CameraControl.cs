@@ -20,22 +20,32 @@ public class CameraControl : MonoBehaviour
         Cursor.lockState = CursorLockMode.Confined;
     }
 
-    void Update()
+    void LateUpdate()
     {
         transform.position = target.position;
 
-        if(useMouseRotation)
+        if (!CupController.instance.ballInCup)
+        {
+            RotateCameras();
+        }
+    }
+
+    public void RotateCameras()
+    {
+        
+        if (useMouseRotation)
         {
             rotation += Input.GetAxis("Mouse X") * moveSpeed * Time.deltaTime;
             verticalRotation += Input.GetAxis("Mouse Y") * moveSpeed * Time.deltaTime;
-        } else
+        }
+        else
         {
             rotation += Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime;
             verticalRotation += Input.GetAxis("Vertical") * moveSpeed * Time.deltaTime;
         }
-       
+
         verticalRotation = Mathf.Clamp(verticalRotation, 0f, 75f);
-        
+
         transform.rotation = Quaternion.Euler(0f, rotation, 0f);
         verticalPoint.localRotation = Quaternion.Euler(verticalRotation, 0f, 0f);
     }
