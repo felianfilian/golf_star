@@ -14,6 +14,9 @@ public class BallController : MonoBehaviour
     public float stopSpeed = 0.95f;
     public bool outOfBounds;
 
+    [HideInInspector]
+    public Vector3 lastBallPosition;
+
     private void Awake()
     {
         instance = this;
@@ -22,6 +25,7 @@ public class BallController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        lastBallPosition = transform.position;
     }
 
     

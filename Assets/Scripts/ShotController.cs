@@ -15,10 +15,13 @@ public class ShotController : MonoBehaviour
     public float powerChangeSpeed = 30f;
     public bool powerGrowing = true;
 
+    
+
     private void Awake()
     {
         instance = this;
     }
+
 
     void Update()
     {

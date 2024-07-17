@@ -4,14 +4,25 @@ using UnityEngine;
 
 public class OutOfBounds : MonoBehaviour
 {
+    public float resetTime = 2f; 
+
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.CompareTag("Player"))
         {
             BallController.instance.outOfBounds = true;
-            UIController.instance.ShowOutText();
-            GameManager.instance.ShotDisabled();
-            GameManager.instance.CountScore(1);
+            StartCoroutine(ResetBallCo());
         }
+    }
+
+    private IEnumerator ResetBallCo()
+    {
+        UIController.instance.ShowOutText();
+        GameManager.instance.ShotDisabled();
+        GameManager.instance.CountScore(1);
+        yield return new WaitForSeconds(resetTime);
+        BallController.instance.transform.position = BallController.instance.lastBallPosition;
+        GameManager.instance.ShotActive();
+        UIController.instance.HideOutText();
     }
 }
