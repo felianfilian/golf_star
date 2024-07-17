@@ -12,9 +12,7 @@ public class BallController : MonoBehaviour
     public float hitpower = 25f;
     public float stopCutoff = 1.75f;
     public float stopSpeed = 0.95f;
-
-    
-
+    public bool outOfBounds;
 
     private void Awake()
     {
@@ -46,7 +44,7 @@ public class BallController : MonoBehaviour
                     rb.velocity = Vector3.zero;
                     rb.angularVelocity = Vector3.zero;
                     
-                    if (!CupController.instance.ballInCup)
+                    if (!CupController.instance.ballInCup && !outOfBounds)
                     {
                         ShotController.instance.canShot = true;
                         camera.ShowIndicator();

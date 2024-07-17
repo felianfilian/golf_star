@@ -8,7 +8,9 @@ public class OutOfBounds : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Player"))
         {
-            Debug.Log("OUT OF BOUNDS");
+            BallController.instance.outOfBounds = true;
+            UIController.instance.ShowOutText();
+            GameManager.instance.ShotDisabled();
             GameManager.instance.CountScore(1);
         }
     }

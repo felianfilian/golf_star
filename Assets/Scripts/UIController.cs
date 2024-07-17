@@ -11,6 +11,8 @@ public class UIController : MonoBehaviour
 
     public Slider sliderPower;
     public GameObject txtWin;
+    public GameObject txtOut;
+
     public TMP_Text txt_score;
     public TMP_Text txt_shots;
     public GameObject resultScreen;
@@ -49,6 +51,16 @@ public class UIController : MonoBehaviour
     public void ShowWinText()
     {
         txtWin.SetActive(true); 
+    }
+
+    public void ShowOutText()
+    {
+        txtOut.SetActive(true);
+    }
+
+    public void HideOutText()
+    {
+        txtOut.SetActive(false);
     }
 
     public void ShowResultScreen(int scoreResult)

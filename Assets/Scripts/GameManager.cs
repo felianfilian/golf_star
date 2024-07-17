@@ -46,9 +46,21 @@ public class GameManager : MonoBehaviour
     private IEnumerator showResultCo()
     {
         UIController.instance.ShowWinText();
-        ShotController.instance.canShot = false;
-        BallController.instance.rb.velocity = Vector3.zero;
+        ShotDisabled();
         yield return new WaitForSeconds(resultDelay);
         UIController.instance.ShowResultScreen(GameManager.instance.score);
+    }
+
+    public void ShotActive()
+    {
+        ShotController.instance.canShot = true;
+        CameraControl.instance.ShowIndicator();
+    }
+
+    public void ShotDisabled()
+    {
+        ShotController.instance.canShot = false;
+        BallController.instance.rb.velocity = Vector3.zero;
+        CameraControl.instance.HideIndicator();
     }
 }

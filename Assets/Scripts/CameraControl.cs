@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CameraControl : MonoBehaviour
 {
+    public static CameraControl instance;
+
     public Transform target;
     public Transform verticalPoint;
     public GameObject directionIndicator;
@@ -13,6 +15,11 @@ public class CameraControl : MonoBehaviour
  
     private float rotation;
     private float verticalRotation;
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     private void Start()
     {
@@ -53,10 +60,12 @@ public class CameraControl : MonoBehaviour
     public void HideIndicator()
     {
         directionIndicator.SetActive(false);
+        Debug.Log("hide");
     }
 
     public void ShowIndicator()
     {
         directionIndicator.SetActive(true);
+        Debug.Log("show");
     }
 }
