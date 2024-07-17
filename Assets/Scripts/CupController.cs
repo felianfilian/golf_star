@@ -6,6 +6,9 @@ using UnityEngine.SocialPlatforms.Impl;
 public class CupController : MonoBehaviour
 {
     public static CupController instance;
+
+    public GameObject effectInHole;
+
     public bool ballInCup = false;
 
     private void Awake()
@@ -18,6 +21,7 @@ public class CupController : MonoBehaviour
         if(other.gameObject.CompareTag("Player"))
         {
             ballInCup = true;
+            Instantiate(effectInHole, transform.position, effectInHole.transform.rotation);
             GameManager.instance.BallInHole();
         }
     }
