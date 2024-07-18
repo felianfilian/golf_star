@@ -60,12 +60,10 @@ public class CameraControl : MonoBehaviour
     public void HideIndicator()
     {
         directionIndicator.SetActive(false);
-        Debug.Log("hide");
     }
 
     public void ShowIndicator()
     {
         directionIndicator.SetActive(true);
-        Debug.Log("show");
     }
 }

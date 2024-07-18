@@ -74,7 +74,7 @@ public class UIController : MonoBehaviour
 
     public void MainMenu()
     {
-
+        
     }
 
     public void Restart()

@@ -51,6 +51,7 @@ public class BallController : MonoBehaviour
                     if (!CupController.instance.ballInCup && !outOfBounds)
                     {
                         ShotController.instance.canShot = true;
+                        lastBallPosition = transform.position;
                         camera.ShowIndicator();
                         UIController.instance.sliderPower.gameObject.SetActive(true);
                     }
@@ -67,5 +68,10 @@ public class BallController : MonoBehaviour
         camera.HideIndicator();
         ShotController.instance.ResetShotPower();
         UIController.instance.sliderPower.gameObject.SetActive(false);
+    }
+
+    public void ResetBallPosition()
+    {
+        transform.position = lastBallPosition;    
     }
 }
