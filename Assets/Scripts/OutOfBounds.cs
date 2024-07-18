@@ -21,6 +21,7 @@ public class OutOfBounds : MonoBehaviour
         GameManager.instance.ShotDisabled();
         GameManager.instance.CountScore(1);
         yield return new WaitForSeconds(resetTime);
+        BallController.instance.outOfBounds = false;
         BallController.instance.ResetBallPosition();
         GameManager.instance.ShotActive();
         UIController.instance.HideOutText();

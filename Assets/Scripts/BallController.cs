@@ -72,6 +72,6 @@ public class BallController : MonoBehaviour
 
     public void ResetBallPosition()
     {
-        transform.position = lastBallPosition;    
+        rb.Move(lastBallPosition, transform.rotation);
     }
 }

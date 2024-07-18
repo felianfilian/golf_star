@@ -82,7 +82,7 @@ public class UIController : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-    public void NestCourse()
+    public void NextCourse()
     {
         
     }

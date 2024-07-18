@@ -55,6 +55,7 @@ public class GameManager : MonoBehaviour
     {
         ShotController.instance.canShot = true;
         CameraControl.instance.ShowIndicator();
+        UIController.instance.sliderPower.gameObject.SetActive(true);
     }
 
     public void ShotDisabled()
@@ -62,5 +63,6 @@ public class GameManager : MonoBehaviour
         ShotController.instance.canShot = false;
         BallController.instance.rb.velocity = Vector3.zero;
         CameraControl.instance.HideIndicator();
+        UIController.instance.sliderPower.gameObject.SetActive(false);
     }
 }
