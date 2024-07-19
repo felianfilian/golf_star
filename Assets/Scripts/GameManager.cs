@@ -19,21 +19,20 @@ public class GameManager : MonoBehaviour
     public void CountShot()
     {
         shotCounter++;
-        if (score < 5)
-        {
-            score++;
-        }
-        else if (score == 6) 
-        {
-            score = 7;
-        }
+        CountScore(1);
         UIController.instance.UpdateScoreCount(score);
         UIController.instance.UpdateShotCount(shotCounter);
     }
 
     public void CountScore(int amount)
     {
-        score += amount;
+        if (score >= 6)
+        {
+            score = 7;
+        } else
+        {
+            score += amount;
+        }
         UIController.instance.UpdateScoreCount(score);
     }
 
