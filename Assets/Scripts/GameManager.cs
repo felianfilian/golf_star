@@ -6,6 +6,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
+    public string[] level;
+
     public int score = 0;
 
     private int shotCounter = 0;
