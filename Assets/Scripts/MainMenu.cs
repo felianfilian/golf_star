@@ -5,10 +5,24 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    public GameObject btnContinue;
+
     public string firstLevel = "Hole_01";
 
     private int actual_level;
-    
+
+    private void Start()
+    {
+        if (PlayerPrefs.HasKey("actual_course"))
+        {
+            btnContinue.SetActive(true);
+        }
+        else
+        {
+            btnContinue.SetActive(false);
+        }
+    }
+
     public void ContinueGame()
     {
         if(PlayerPrefs.HasKey("actual_course"))

@@ -11,20 +11,8 @@ public class GameController : MonoBehaviour
     private void Awake()
     {
         instance = this;
+
+        DontDestroyOnLoad(gameObject);
     }
 
-    void Start()
-    {
-        if(PlayerPrefs.HasKey("actual_course"))
-        {
-            //PlayerPrefs.GetInt("actual_course");
-        }
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

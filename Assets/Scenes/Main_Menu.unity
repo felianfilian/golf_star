@@ -565,6 +565,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 31c58b5c4f3be2a4ea181ed3cc669b48, type: 3}
+--- !u!1 &560995409 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1880576690574339163, guid: dbb9ff1f266c3c845a9f9d2ea0db6835, type: 3}
+  m_PrefabInstance: {fileID: 20414073}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &658574041
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1852,6 +1857,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8011e0bf7509f7f448e9292f5390213a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  courseList: []
 --- !u!4 &1931422154
 Transform:
   m_ObjectHideFlags: 0
@@ -2504,6 +2510,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acac3945a0d1f234cbf333b1c35f11b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  btnContinue: {fileID: 560995409}
   firstLevel: Hole_01
 --- !u!4 &6301768310312054382
 Transform:
