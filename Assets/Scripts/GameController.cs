@@ -4,9 +4,21 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public static GameController instance;
+
+    public string[] courseList;
+
+    private void Awake()
+    {
+        instance = this;
+    }
+
     void Start()
     {
+        if(PlayerPrefs.HasKey("actual_course"))
+        {
+            //PlayerPrefs.GetInt("actual_course");
+        }
         
     }
 
