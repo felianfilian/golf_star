@@ -6,7 +6,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
-    public string[] level;
+    public string[] levelScenes;
 
     public int score = 0;
 

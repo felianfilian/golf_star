@@ -338,6 +338,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b3646b7263446bc4e8e67607500ef253, type: 3}
   m_PrefabInstance: {fileID: 173326116}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &221211162
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 221211163}
+  m_Layer: 0
+  m_Name: GameController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &221211163
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 221211162}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.3995829, y: 8.158639, z: 2.959836}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &224126683
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -981,6 +1012,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -5148914591892728797, guid: 3a933dddf818dae489aa9ef552d17834, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1015524528}
+    - targetCorrespondingSourceObject: {fileID: -5148914591892728797, guid: 3a933dddf818dae489aa9ef552d17834, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1015524535}
   m_SourcePrefab: {fileID: 100100000, guid: 3a933dddf818dae489aa9ef552d17834, type: 3}
 --- !u!1 &1015524525 stripped
 GameObject:
@@ -1036,6 +1070,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -7156673446705693721, guid: 3a933dddf818dae489aa9ef552d17834, type: 3}
+--- !u!114 &1015524535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1015524526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9c8ef6e16076094e836ca96d8099e5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotateSpeed: 30
 --- !u!1001 &1137367770
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2046,3 +2093,4 @@ SceneRoots:
   - {fileID: 1823593757}
   - {fileID: 130864274}
   - {fileID: 1015524524}
+  - {fileID: 221211163}
