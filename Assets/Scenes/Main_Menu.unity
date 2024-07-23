@@ -1857,7 +1857,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8011e0bf7509f7f448e9292f5390213a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  courseList: []
+  courseList:
+  - Main_Menu
+  - Hole_01
+  - Hole_02
+  actual_course: 0
 --- !u!4 &1931422154
 Transform:
   m_ObjectHideFlags: 0
@@ -2511,7 +2515,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   btnContinue: {fileID: 560995409}
-  firstLevel: Hole_01
+  firstLevelName: Hole_01
+  actualLevel: MainMenu
 --- !u!4 &6301768310312054382
 Transform:
   m_ObjectHideFlags: 0

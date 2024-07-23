@@ -2016,6 +2016,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 14.77
       objectReference: {fileID: 0}
+    - target: {fileID: 6758900016694824871, guid: ce89a645ee92ce142803a5dc8435ea1b, type: 3}
+      propertyPath: nextLevelScene
+      value: Main_Menu
+      objectReference: {fileID: 0}
     - target: {fileID: 7110104713992949970, guid: ce89a645ee92ce142803a5dc8435ea1b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1

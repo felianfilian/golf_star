@@ -14,15 +14,13 @@ public class GameManager : MonoBehaviour
     private int shotCounter = 0;
     private float resultDelay = 2f;
 
+    [Header("Scenes")]
+    public string mainMenuScene = "Main_Menu";
+    public string nextLevelScene = "Main_Menu";
+
     private void Awake()
     {
         instance = this;
-    }
-
-    private void SetActualLevel()
-    {
-
-        PlayerPrefs.SetString("actual_course",SceneManager.GetActiveScene().name);
     }
 
     public void CountShot()

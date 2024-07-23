@@ -7,17 +7,17 @@ public class MainMenu : MonoBehaviour
 {
     public GameObject btnContinue;
 
-    public string firstLevel = "Hole_01";
+    public string firstLevelName = "Hole_01";
 
-    private int actual_level;
+    public string actualLevel = "MainMenu";
 
     private void Start()
     {
         if (PlayerPrefs.HasKey("actual_course"))
         {
+            actualLevel = PlayerPrefs.GetString("actual_course");
             btnContinue.SetActive(true);
-        }
-        else
+        } else
         {
             btnContinue.SetActive(false);
         }
@@ -27,15 +27,14 @@ public class MainMenu : MonoBehaviour
     {
         if(PlayerPrefs.HasKey("actual_course"))
         {
-            actual_level = PlayerPrefs.GetInt("actual_course");
-            firstLevel = GameController.instance.courseList[actual_level];
+            SceneManager.LoadScene(actualLevel);
         } 
-        SceneManager.LoadScene(firstLevel);
     }
 
     public void StartGame()
     {
-        SceneManager.LoadScene(firstLevel);
+        SceneManager.LoadScene(firstLevelName);
+        PlayerPrefs.SetString("actual_course", firstLevelName);
     }
 
     public void Quit()
