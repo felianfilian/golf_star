@@ -18,8 +18,6 @@ public class UIController : MonoBehaviour
     public GameObject resultScreen;
     public TMP_Text txtResult;
 
-    
-   
     private void Awake()
     {
         instance = this;
@@ -86,7 +84,8 @@ public class UIController : MonoBehaviour
 
     public void NextCourse()
     {
-        PlayerPrefs.SetString("sctual_course", GameManager.instance.nextLevelScene);
+        PlayerPrefs.SetString("actual_course", GameManager.instance.nextLevelScene);
+        Debug.Log(PlayerPrefs.GetString("actual_course"));
         SceneManager.LoadScene(GameManager.instance.nextLevelScene);
     }
 }

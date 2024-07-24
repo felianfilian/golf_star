@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Hole_02.unity
     guid: fa109bba1371e3945b913eafac0454e3
+  - enabled: 1
+    path: Assets/Scenes/Hole_03.unity
+    guid: efa0f66464cf3bc4ba5d3478da354a87
   m_configObjects: {}
