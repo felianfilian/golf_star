@@ -33,8 +33,9 @@ public class MainMenu : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene(firstLevelName);
         PlayerPrefs.SetString("actual_course", firstLevelName);
+        PlayerPrefs.SetInt("full_score", 0);
+        SceneManager.LoadScene(firstLevelName);
     }
 
     public void Quit()

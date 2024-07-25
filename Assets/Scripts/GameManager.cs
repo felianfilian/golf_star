@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour
         if(PlayerPrefs.HasKey("full_score"))
         {
             fullScore = PlayerPrefs.GetInt("full_score");
+            Debug.Log(fullScore);
         } else
         {
             fullScore = 0;
