@@ -28,7 +28,10 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        if(PlayerPrefs.HasKey("full_score"))
+        //int audioIndex = Random.Range(0, AudioManager.instance.music.Length);
+        AudioManager.instance.PlayMusic(0);
+
+        if (PlayerPrefs.HasKey("full_score"))
         {
             fullScore = PlayerPrefs.GetInt("full_score");
             Debug.Log(fullScore);

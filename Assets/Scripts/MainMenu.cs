@@ -13,6 +13,8 @@ public class MainMenu : MonoBehaviour
 
     private void Start()
     {
+        AudioManager.instance.PlayMusic(1);
+
         if (PlayerPrefs.HasKey("actual_course"))
         {
             actualLevel = PlayerPrefs.GetString("actual_course");

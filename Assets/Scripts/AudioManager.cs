@@ -14,13 +14,13 @@ public class AudioManager : MonoBehaviour
         instance = this;
     }
 
-    public void PlayMusic()
+    public void PlayMusic(int musicIndex)
     {
-
+        music[musicIndex].Play();
     }
 
-    public void PlaySfx()
+    public void PlaySfx(int sfxIndex)
     {
-
+        sfx[sfxIndex].Play();
     }
 }
