@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public string[] levelScenes;
 
     public int score = 0;
+    public int fullScore;
 
     [Header("Scenes")]
     public string mainMenuScene = "Main_Menu";
@@ -18,7 +19,6 @@ public class GameManager : MonoBehaviour
 
     private int shotCounter = 0;
     private float resultDelay = 2f;
-    private int fullScore;
 
     
     private void Awake()

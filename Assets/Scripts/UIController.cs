@@ -65,7 +65,8 @@ public class UIController : MonoBehaviour
 
     public void ShowResultScreen(int scoreResult)
     {
-        txtResult.text = scoreResult.ToString();
+        int newScore = scoreResult + GameManager.instance.fullScore;
+        txtResult.text = GameManager.instance.fullScore + " + " + scoreResult.ToString() + " = " + newScore;
         txtWin.SetActive(false);
         resultScreen.SetActive(true);
     }
@@ -85,7 +86,7 @@ public class UIController : MonoBehaviour
     public void NextCourse()
     {
         PlayerPrefs.SetString("actual_course", GameManager.instance.nextLevelScene);
-        Debug.Log(PlayerPrefs.GetString("actual_course"));
+        PlayerPrefs.SetInt("full_score", GameManager.instance.fullScore);
         SceneManager.LoadScene(GameManager.instance.nextLevelScene);
     }
 }
