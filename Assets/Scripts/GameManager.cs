@@ -11,16 +11,31 @@ public class GameManager : MonoBehaviour
 
     public int score = 0;
 
-    private int shotCounter = 0;
-    private float resultDelay = 2f;
-
     [Header("Scenes")]
     public string mainMenuScene = "Main_Menu";
     public string nextLevelScene = "Main_Menu";
 
+
+    private int shotCounter = 0;
+    private float resultDelay = 2f;
+    private int fullScore;
+
+    
     private void Awake()
     {
         instance = this;
+    }
+
+    private void Start()
+    {
+        if(PlayerPrefs.HasKey("full_score"))
+        {
+            fullScore = PlayerPrefs.GetInt("full_score");
+        } else
+        {
+            fullScore = 0;
+        }
+        
     }
 
     public void CountShot()
