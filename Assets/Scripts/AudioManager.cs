@@ -23,4 +23,20 @@ public class AudioManager : MonoBehaviour
     {
         sfx[sfxIndex].Play();
     }
+
+    public void StopMusic()
+    {
+        foreach(AudioSource clip in music)
+        {
+            clip.Stop();
+        }
+    }
+
+    public void StopSFX()
+    {
+        foreach (AudioSource clip in sfx)
+        {
+            clip.Stop();
+        }
+    }
 }
