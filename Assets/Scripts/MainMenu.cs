@@ -13,7 +13,6 @@ public class MainMenu : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log(PlayerPrefs.GetString("actual_course"));
         AudioManager.instance.PlayMusic(1);
 
         if (PlayerPrefs.HasKey("actual_course") && PlayerPrefs.GetString("actual_course") != "Main_Menu")

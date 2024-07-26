@@ -16,11 +16,13 @@ public class AudioManager : MonoBehaviour
 
     public void PlayMusic(int musicIndex)
     {
+        StopMusic();
         music[musicIndex].Play();
     }
 
     public void PlaySfx(int sfxIndex)
     {
+        StopSFX();
         sfx[sfxIndex].Play();
     }
 

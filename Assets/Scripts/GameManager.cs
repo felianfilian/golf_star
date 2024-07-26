@@ -28,7 +28,6 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        AudioManager.instance.StopMusic();
         int audioIndex = Random.Range(0, AudioManager.instance.music.Length);
         AudioManager.instance.PlayMusic(0);
 

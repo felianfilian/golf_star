@@ -22,6 +22,7 @@ public class CupController : MonoBehaviour
         {
             ballInCup = true;
             Instantiate(effectInHole, transform.position, effectInHole.transform.rotation);
+            AudioManager.instance.PlaySfx(2);
             GameManager.instance.BallInHole();
         }
     }
